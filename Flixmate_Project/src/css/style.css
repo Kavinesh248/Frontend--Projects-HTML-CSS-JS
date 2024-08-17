@@ -1,0 +1,66 @@
+:root {
+  --background: hsla(220, 17%, 7%, 1);
+  --banner-background: hsla(250, 6%, 20%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --on-background: hsla(220, 100%, 95%, 1);
+  --on-surface: hsla(250, 100%, 95%, 1);
+  --on-surface-variant: hsla(250, 1%, 44%, 1);
+  --primary: hsla(349, 100%, 43%, 1);
+  --primary-variant: hsla(349, 69%, 51%, 1);
+  --rating-color: hsla(44, 100%, 49%, 1);
+  --surface: hsla(250, 13%, 11%, 1);
+  --text-color: hsla(250, 2%, 59%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --banner-overlay: 90deg, hsl(220, 17%, 7%) 0%, hsla(220, 17%, 7%, 0.5) 100%;
+  --bottom-overlay: 180deg, hsla(250, 13%, 11%, 0), hsla(250, 13%, 11%, 1);
+  --ff-dm-sans: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--ff-dm-sans);
+}
+
+/* HEADER SECTION */
+
+.header {
+  padding: 2.8rem 5.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 3.6rem;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  width: 36rem;
+  height: 3.2rem;
+  padding: 2.4rem 1.6rem;
+  background-color: var(--banner-background);
+  color: white;
+  border-radius: 1rem;
+}
+
+.search-icon {
+  opacity: 0.5;
+  font-size: 1.4rem;
+  margin-left: -0.4rem;
+}
+
+.form-container input {
+  font-size: 1.6rem;
+  border: none;
+  background-color: inherit;
+  letter-spacing: 0.05rem;
+  width: 100%;
+}
+
+.form-container input:focus {
+  outline: none;
+}
