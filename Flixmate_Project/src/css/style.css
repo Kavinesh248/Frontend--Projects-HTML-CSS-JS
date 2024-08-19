@@ -19,6 +19,7 @@
 body {
   background-color: var(--background);
   font-family: var(--ff-dm-sans);
+  height: 100vh;
 }
 
 /* HEADER SECTION */
@@ -63,4 +64,316 @@ body {
 
 .form-container input:focus {
   outline: none;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+  display: grid;
+  grid-template-columns: 250px 6fr;
+  overflow: hidden;
+}
+
+/* SIDEBAR */
+.section-sidebar {
+  padding: 3.6rem 3.2rem;
+  color: var(--white);
+  max-height: 86vh;
+  scroll-snap-type: y mandatory;
+  background-color: var(--background);
+  overflow: hidden;
+}
+
+.section-sidebar:hover {
+  overflow-y: auto;
+}
+
+.section-sidebar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.section-sidebar::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.section-sidebar::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
+  border-radius: 10px;
+  border: 2px solid var(--surface);
+}
+
+.genre {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  margin-left: 2.4rem;
+}
+
+.genre-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1.8rem;
+  list-style: none;
+  margin-left: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 4.2rem;
+}
+
+.genre-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.genre-link:link,
+.genre-link:visited {
+  text-decoration: none;
+  color: var(--on-surface-variant);
+}
+
+.genre-link:hover,
+.genre-link:active {
+  color: var(--white);
+}
+
+/* BANNER CONTAINER */
+.movie-container {
+  padding: 2.4rem;
+  overflow-y: auto;
+  max-height: 86vh;
+  scroll-snap-type: y mandatory;
+  background-color: var(--surface);
+  border-radius: 5rem 0 0 0;
+}
+
+.banner-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50rem;
+  margin-bottom: 4.8rem;
+}
+
+.banner-container img {
+  width: 100%;
+  height: 50rem;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  max-width: 50rem;
+  top: 50%;
+  left: 29%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: var(--white);
+}
+
+.dark-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.889),
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 3rem;
+  pointer-events: none;
+}
+
+.banner-title {
+  font-size: 5.4rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.banner-year,
+.banner-genre,
+.banner-text {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.banner-year {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.banner-rating {
+  background-color: var(--banner-background);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.banner-genre {
+  line-height: 1.2;
+}
+
+.banner-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-bottom: 1.8rem;
+  line-height: 1.4;
+}
+
+.btn--watch-now {
+  padding: 1.4rem 3.6rem;
+  border: none;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1.4rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5;
+  cursor: pointer;
+}
+
+.btn--watch-now .fa-solid {
+  margin-right: 1rem;
+}
+
+/* BANNER MOVIE SUGGESTIONS */
+.banner--suggestions-container {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  left: calc(100% - 40rem);
+  padding: 4px 0 4px 4px;
+}
+
+.suggest-movies {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+}
+
+.suggest-movies::-webkit-scrollbar {
+  display: none;
+}
+
+.suggest-movie {
+  background-image: url(../images/poster-bg-icon.png);
+  width: 10rem;
+  flex-shrink: 0;
+  aspect-ratio: 2 / 3;
+  background: none;
+  border: none;
+  filter: brightness(0.4);
+  cursor: pointer;
+}
+
+.suggest-movie .banner-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.movie-active {
+  filter: brightness(1);
+}
+
+/* TOP RATED MOVIES */
+.movie--list-container {
+  color: var(--white);
+}
+
+.movie-type {
+  font-size: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.cards-container {
+  display: flex;
+  gap: 1.8rem;
+  overflow-x: auto;
+  padding-bottom: 1.8rem;
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 1rem;
+}
+
+.cards-container::-webkit-scrollbar-track {
+  border-radius: 1.5rem;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background-color: var(--banner-background);
+  border-radius: 10px;
+  border: 0.1rem solid var(--surface); /* Thinner border to match scrollbar width */
+}
+
+.movie-card {
+  position: relative;
+  width: 20rem;
+}
+
+.movie-card figure {
+  min-width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.movie-card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.movie-title,
+.movie-year {
+  font-weight: 600;
+}
+
+.movie-title {
+  font-size: 2.2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.movie-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-item {
+  display: flex;
+  gap: 0.5rem;
+  /* align-items: center; */
+}
+
+.movie-item .movie-rating {
+  font-size: 1.8rem;
+  color: var(--on-surface);
+}
+
+.movie-data .movie-year {
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--banner-background);
+  border-radius: 0.4rem;
+}
+
+.card-btn {
+  position: absolute;
+  inset: 0;
+  cursor: default;
 }
