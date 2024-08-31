@@ -135,7 +135,6 @@ body {
   padding: 2.4rem;
   overflow-y: auto;
   max-height: calc(100vh - 108px);
-  scroll-snap-type: y mandatory;
   background-color: var(--surface);
   border-radius: 3.6rem 0 0 0;
   position: relative;
@@ -380,8 +379,7 @@ body {
 .movie--detail-container {
   display: flex;
   align-items: flex-start;
-  gap: 4rem;
-  overflow-y: auto;
+  gap: 5rem;
   height: 100%;
 }
 
@@ -404,6 +402,7 @@ body {
 .movie-details {
   color: var(--white);
   margin-top: 2.4rem;
+  flex-grow: 1;
 }
 
 .details-container {
@@ -487,23 +486,24 @@ body {
 
 .title-wrapper {
   font-size: 2rem;
-  margin: 4.8rem 0;
+  margin: 4.8rem 0 2.4rem 0;
 }
 
 .video-slider {
-  width: 59vw;
   overflow-x: auto;
+  padding-block-end: 16px;
+  margin-block-end: -16px;
 }
 
 .slider-inner {
   display: flex;
   gap: 1.2rem;
-  width: max-content;
 }
 
 .video-card {
   background-image: url(../images/video-bg-icon.png);
   aspect-ratio: 16 / 9;
   flex-shrink: 0;
-  width: 50rem;
+  max-width: 50rem;
+  width: calc(100% - 40px);
 }
