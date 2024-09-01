@@ -135,6 +135,7 @@ body {
   padding: 2.4rem;
   overflow-y: auto;
   max-height: calc(100vh - 108px);
+  height: calc(100vh - 108px);
   background-color: var(--surface);
   border-radius: 3.6rem 0 0 0;
   position: relative;
@@ -406,7 +407,7 @@ body {
 }
 
 .details-container {
-  width: 75rem;
+  width: 79rem;
 }
 
 .detail-title {
@@ -453,13 +454,14 @@ body {
 }
 
 .detail-genre {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 2.4rem;
 }
 
 .detail-storyline {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 500;
   line-height: 1.6;
   margin-bottom: 3.2rem;
 }
@@ -473,7 +475,7 @@ body {
   align-items: flex-start;
   margin-block-end: 12px;
   gap: 8px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 1.4rem;
   line-height: 1.6;
 }
@@ -506,4 +508,75 @@ body {
   flex-shrink: 0;
   max-width: 50rem;
   width: calc(100% - 40px);
+}
+
+/* section search */
+.movie-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 23rem);
+  justify-items: start;
+  gap: 3.3rem;
+}
+
+.section-search {
+  background-color: var(--surface);
+  height: calc(100vh - 108px);
+  overflow-y: auto;
+  color: var(--white);
+  padding: 6.4rem;
+}
+
+.search--movie-card {
+  width: 25rem;
+  display: inline-block;
+}
+
+.search--movie-card figure {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.search--movie-card figure img {
+  width: 100%;
+}
+
+.search--movie-name {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.search--movie-data {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+
+.search--rating-box {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.search--rating-box img {
+  width: 2.4rem;
+}
+
+.search--movie-year {
+  font-size: 1.6rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--banner-background);
+  border-radius: 0.8rem;
+}
+
+.results {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-variant);
+  margin-bottom: 0.8rem;
+}
+
+.search-movie {
+  font-size: 5.6rem;
+  margin-bottom: 3.6rem;
 }
