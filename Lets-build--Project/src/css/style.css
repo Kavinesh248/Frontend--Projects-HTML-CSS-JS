@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("../images/MonaSansVF-Regular.woff")
+      format("woff2 supports variations"),
+    url("../images/MonaSansVF-Regular.woff") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  color: #fff;
+  background-color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: #b5bec5;
+}
+
+.section-top {
+  position: relative;
+  background-image: linear-gradient(#0000 60%, #000 100%),
+    linear-gradient(to right, #0000 50%, #0009 100%),
+    linear-gradient(to right, #000c, #0000004d 100%, #000000e6 100%),
+    url("../images/projects-picture/hero-home.jpg");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 20px;
+  z-index: 1;
+}
+
+.header,
+.section-about,
+.section-projects {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 6.8rem;
+}
+
+.header-navbar {
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+  font-size: 1.6rem;
+}
+
+.designer {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.icon {
+  height: 2rem;
+}
+
+.link:link,
+.link:visited {
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.btn-contact,
+.cta-btn {
+  height: 4.4rem;
+  min-width: 13rem;
+  border: none;
+  color: #b5bec5;
+  background: transparent;
+  border-radius: 2.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn-contact {
+  background-color: #316cff;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.btn-contact:hover {
+  border: 0.2rem solid #63b8ff;
+}
+
+.logo {
+  height: 6rem;
+  width: 6rem;
+}
+
+.section-about {
+  padding: 0 9.6rem;
+  width: 100rem;
+  text-align: center;
+  margin: 6.4rem auto;
+}
+
+.main-about {
+  margin-bottom: 6.4rem;
+}
+
+.sub-about {
+  display: flex;
+  gap: 3.6rem;
+  justify-content: center;
+}
+
+.cta-btn {
+  border: 0.2rem solid #6b6b6b;
+}
+
+.cta-btn:hover {
+  border: 0.2rem solid #fff;
+}
+
+.heading-primary {
+  font-size: 4.4rem;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  color: #adb7be;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.section-projects {
+  padding: 2.4rem 4.8rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  width: 35rem;
+  height: auto;
+  background-color: #181818;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.project-img:hover {
+  filter: brightness(70%);
+}
+
+.container-details {
+  padding: 1.2rem;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 26rem;
+}
+
+.project-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-likes {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  mask: url("../images/icons8-heart-30.png") no-repeat center;
+  mask-size: contain;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 12.8rem 0;
+  background: #181818;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 8rem;
+  margin-bottom: 2.4rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.social-link:link,
+.social-link:active {
+  color: #b5bec5;
+}
+
+.social-link:hover {
+  color: #fff;
+}
