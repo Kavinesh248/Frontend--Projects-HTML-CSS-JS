@@ -1,0 +1,198 @@
+/* rem and em do NOT depend on HTML font size in media queries 
+ 1rem = 1em = 16px
+*/
+
+@media (max-width: 84em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .header {
+    padding: 1rem 4.6rem;
+  }
+
+  .section-about {
+    margin: 4.8rem auto;
+  }
+
+  .section-projects {
+    padding: 2.4rem 3.6rem;
+  }
+
+  .main-about {
+    margin-bottom: 8.6rem;
+  }
+}
+
+@media (max-width: 79em) {
+  .section-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main-about {
+    margin-bottom: 6.8rem;
+  }
+}
+
+@media (max-width: 64em) {
+  /* html {
+    font-size: 50%;
+  } */
+
+  .header {
+    padding: 1rem 3.4rem;
+  }
+}
+
+@media (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+
+  .section-projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-about {
+    margin-bottom: 6.4rem;
+  }
+
+  .social-links {
+    gap: 3rem;
+  }
+
+  .header-navbar {
+    gap: 3rem;
+    font-size: 1.8rem;
+  }
+
+  /* .logo {
+    height: 6.4rem;
+    width: 6.4rem;
+  } */
+}
+
+@media (max-width: 50em) {
+  .header {
+    padding: 1rem 2.6rem;
+  }
+
+  .section-about {
+    width: 80rem;
+    padding: 0 3.4rem;
+    margin: 3.6rem auto;
+  }
+
+  .btn--mobile-nav {
+    display: block;
+  }
+
+  .header-navbar {
+    background-color: #262626;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    transform: translateX(100%);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6.4rem;
+    font-size: 2rem;
+    transition: all 0.5s ease-in;
+
+    /* Hide Navigation */
+    /* NOt able to apply transitions */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccesible to mouse and keyboards */
+    pointer-events: none;
+
+    /* 3) Hide it from screen-readers */
+    visibility: hidden;
+  }
+
+  .nav-open .header-navbar {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .btn-contact {
+    height: 4.6rem;
+    width: 16rem;
+    font-size: 2rem;
+  }
+
+  .logo {
+    z-index: 100000;
+  }
+
+  .nav-open .icon--mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon--mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+}
+
+@media (max-width: 41em) {
+  .header {
+    padding: 1rem 1rem;
+  }
+
+  .section-about {
+    padding: 0 5rem;
+    margin: 3.6rem;
+  }
+
+  .section-projects {
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+  }
+
+  .about-content {
+    padding: 0 3rem;
+  }
+
+  .copyright {
+    left: 5;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 32em) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .section-about {
+    width: 60rem;
+    margin: 3rem 0;
+  }
+
+  .sub-about {
+    gap: 1.2rem;
+    padding: 0 3.4rem;
+  }
+
+  .cta-btn {
+    font-size: 1.8rem;
+  }
+
+  .social-links {
+    gap: 2.4rem;
+  }
+
+  .section-projects {
+    padding: 1.8rem 2.4rem;
+  }
+}
