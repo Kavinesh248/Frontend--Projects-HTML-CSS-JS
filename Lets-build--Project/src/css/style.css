@@ -16,7 +16,7 @@
 html {
   font-family: "Nunito", sans-serif;
   font-size: 62.5%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -37,7 +37,7 @@ a {
   background-image: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(0, 0, 0, 0.7) 60%,
+      rgba(0, 0, 0, 0.6) 100%,
       #000 100%
     ),
     linear-gradient(
@@ -52,6 +52,7 @@ a {
   height: auto;
   padding: 20px;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .section-about,
@@ -86,7 +87,7 @@ a {
 .icon--mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: #fff;
+  color: #adb7be;
 }
 
 .icon--mobile-nav[name="close-outline"] {
@@ -126,7 +127,9 @@ a {
   background: transparent;
   border-radius: 2.5rem;
   font-size: 1.6rem;
+  font-weight: 500;
   cursor: pointer;
+  padding: 0 1.4rem;
   transition: all 0.4s;
 }
 
@@ -143,10 +146,6 @@ a {
   color: #fff;
 }
 
-.btn-contact:hover {
-  border: 0.2rem solid #63b8ff;
-}
-
 .section-about {
   display: flex;
   flex-direction: column;
@@ -155,17 +154,21 @@ a {
   padding: 0 9.6rem;
   width: 100rem;
   text-align: center;
-  margin: 6.4rem 0;
+  margin: 12.8rem 0;
 }
 
-.main-about {
-  margin-bottom: 12.8rem;
+.filters-box {
+  display: flex;
+  margin: 0 -32px;
+  overflow: auto;
+  scrollbar-width: none;
+  margin-bottom: 2.8rem;
 }
 
 .sub-about {
   display: flex;
-  gap: 3.6rem;
-  justify-content: center;
+  margin: 0 auto;
+  gap: 3rem;
 }
 
 .cta-btn {
@@ -176,10 +179,14 @@ a {
   border: 0.2rem solid #fff;
 }
 
+.project-active {
+  border: 0.2rem solid #316cff;
+}
+
 .heading-primary {
   font-size: 4.4rem;
   margin-bottom: 2rem;
-  line-height: 4.8rem;
+  line-height: 1.3;
   letter-spacing: -1px;
 }
 
