@@ -3,6 +3,7 @@
 */
 
 @media (max-width: 84em) {
+  /* 1344px */
   html {
     font-size: 56.25%;
   }
@@ -12,29 +13,23 @@
   }
 
   .section-about {
-    margin: 4.8rem auto;
+    margin: 6.8rem auto 8.6rem auto;
   }
 
   .section-projects {
     padding: 2.4rem 3.6rem;
   }
-
-  .main-about {
-    margin-bottom: 8.6rem;
-  }
 }
 
 @media (max-width: 79em) {
+  /* 1264px */
   .section-projects {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .main-about {
-    margin-bottom: 6.8rem;
   }
 }
 
 @media (max-width: 64em) {
+  /* 1024px */
   /* html {
     font-size: 50%;
   } */
@@ -45,16 +40,13 @@
 }
 
 @media (max-width: 60em) {
+  /* 960px */
   html {
     font-size: 50%;
   }
 
   .section-projects {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .main-about {
-    margin-bottom: 6.4rem;
   }
 
   .social-links {
@@ -73,6 +65,7 @@
 }
 
 @media (max-width: 50em) {
+  /* 800px */
   .header {
     padding: 1rem 2.6rem;
   }
@@ -80,7 +73,7 @@
   .section-about {
     width: 80rem;
     padding: 0 3.4rem;
-    margin: 3.6rem auto;
+    margin: 5rem auto 6.8rem auto;
   }
 
   .btn--mobile-nav {
@@ -131,6 +124,10 @@
     font-size: 2rem;
   }
 
+  .cta-btn {
+    font-size: 1.8rem;
+  }
+
   .logo {
     z-index: 100000;
   }
@@ -145,13 +142,31 @@
 }
 
 @media (max-width: 41em) {
+  /* 656px */
   .header {
-    padding: 1rem 1rem;
+    padding: 1rem;
+  }
+
+  .section-top {
+    background-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.001) 10%,
+        #000 100%
+      ),
+      linear-gradient(
+        to right,
+        rgba(18, 18, 18, 0.9) 100%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../images/hero-home.webp");
   }
 
   .section-about {
-    padding: 0 5rem;
-    margin: 3.6rem;
+    width: 70rem;
+    /* padding: 0 7rem 0 5rem; */
+    margin: 3.6rem auto 5rem auto;
+    text-align: center;
   }
 
   .section-projects {
@@ -159,8 +174,23 @@
     row-gap: 4.8rem;
   }
 
-  .about-content {
-    padding: 0 3rem;
+  .heading-primary {
+    line-height: 1.4;
+  }
+
+  .filters-box {
+    width: 100vw;
+  }
+
+  .sub-about {
+    flex-wrap: nowrap;
+    gap: 2.4rem;
+  }
+
+  .sub-about::before {
+    content: "";
+    flex: 0 0 16px;
+    width: 17px;
   }
 
   .copyright {
@@ -170,22 +200,20 @@
 }
 
 @media (max-width: 32em) {
+  /* 512px */
   .header {
-    padding: 1rem 0;
+    padding: 0;
   }
 
   .section-about {
-    width: 60rem;
-    margin: 3rem 0;
+    width: 70rem;
+    margin: 4.8rem 0 6.8rem 0;
+    padding: 0 6rem 0 7rem;
+    text-align: start;
   }
 
   .sub-about {
-    gap: 1.2rem;
-    padding: 0 3.4rem;
-  }
-
-  .cta-btn {
-    font-size: 1.8rem;
+    margin: 0;
   }
 
   .social-links {
@@ -193,6 +221,12 @@
   }
 
   .section-projects {
-    padding: 1.8rem 2.4rem;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 26em) {
+  .section-about {
+    width: 55rem;
   }
 }
