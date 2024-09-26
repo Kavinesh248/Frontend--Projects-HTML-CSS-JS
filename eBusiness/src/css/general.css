@@ -1,0 +1,31 @@
+.padding--inline-sm {
+  padding-inline-start: 0.6rem;
+}
+
+.margin--bottom-md {
+  margin-bottom: 1.8rem;
+}
+
+.flexbox-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.show-sidebar {
+  left: 0;
+}
+
+.active-link:link,
+.active-link:visited {
+  color: var(--first-color);
+}
+
+.active-link:link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0.3rem;
+  height: 2.4rem;
+  background-color: var(--first-color);
+}

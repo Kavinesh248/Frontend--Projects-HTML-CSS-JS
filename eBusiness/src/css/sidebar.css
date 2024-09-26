@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*
+  --title-color: hsl(228, 18%, 16%);
+  --text-color: hsl(228, 8%, 56%);
+  --body-color: hsl(228, 100%, 99%);
+  --shadow-color: hsla(228, 80%, 4%, 0.1);
+  --menu-color: #000;
+  --logo-container-color: #e1e2e6;
+  --white-: #fff; */
+
+  --first-color: hsl(228, 85%, 63%);
+  --primary-color: #3a3b3c;
+  --primary--color-light: #f6f5ff;
+  --secondary-color: #d6d6d6;
+  --sidebar-color: #1a1b1d;
+  --bg-color: #fff;
+  --text-color: #ccc;
+  --icon-color: #7a7a7a;
+  --helper-color: #777777;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 26.8rem 1fr;
+}
+
+.sidebar {
+  background-color: var(--sidebar-color);
+}
+
+.logo {
+  height: 8rem;
+  width: 8rem;
+}
+
+.project-container {
+  padding: 2.4rem;
+}
+
+.project--main-container {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
